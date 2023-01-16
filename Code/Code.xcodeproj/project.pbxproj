@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65CDC476297509CF00923CF8 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC475297509CF00923CF8 /* Array.swift */; };
+		65CDC478297509D600923CF8 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC477297509D600923CF8 /* DFS.swift */; };
+		65CDC47A297509E300923CF8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC479297509E300923CF8 /* List.swift */; };
+		65CDC47C297509EC00923CF8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC47B297509EC00923CF8 /* Stack.swift */; };
 		65DC79C5296B09D3005DD275 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC79C4296B09D3005DD275 /* main.swift */; };
 		65DE07C9296C15D000B88B95 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE07C8296C15D000B88B95 /* TreeNode.swift */; };
 		65DE07CB296C1FA700B88B95 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DE07CA296C1FA700B88B95 /* ListNode.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65CDC475297509CF00923CF8 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		65CDC477297509D600923CF8 /* DFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
+		65CDC479297509E300923CF8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		65CDC47B297509EC00923CF8 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		65DC79C1296B09D2005DD275 /* Code */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DC79C4296B09D3005DD275 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		65DE07C8296C15D000B88B95 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
@@ -50,6 +58,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65CDC47D297509FE00923CF8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				65DE07CA296C1FA700B88B95 /* ListNode.swift */,
+				65CDC479297509E300923CF8 /* List.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		65CDC47E29750A3C00923CF8 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				65DE07C8296C15D000B88B95 /* TreeNode.swift */,
+				65DE07CC296D954D00B88B95 /* TreeTraversal.swift */,
+				65DE07CE296FD5DC00B88B95 /* Tree.swift */,
+				65DE07D0296FD69100B88B95 /* BinarySearchTree.swift */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
 		65DC79B8296B09D2005DD275 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				65DC79C4296B09D3005DD275 /* main.swift */,
-				65DE07CA296C1FA700B88B95 /* ListNode.swift */,
-				65DE07C8296C15D000B88B95 /* TreeNode.swift */,
-				65DE07CC296D954D00B88B95 /* TreeTraversal.swift */,
-				65DE07CE296FD5DC00B88B95 /* Tree.swift */,
-				65DE07D0296FD69100B88B95 /* BinarySearchTree.swift */,
+				65CDC47D297509FE00923CF8 /* List */,
+				65CDC47E29750A3C00923CF8 /* Tree */,
 				65DE07D2296FE0D200B88B95 /* DP.swift */,
+				65CDC475297509CF00923CF8 /* Array.swift */,
+				65CDC477297509D600923CF8 /* DFS.swift */,
+				65CDC47B297509EC00923CF8 /* Stack.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CDC476297509CF00923CF8 /* Array.swift in Sources */,
 				65DE07CF296FD5DC00B88B95 /* Tree.swift in Sources */,
 				65DE07D1296FD69100B88B95 /* BinarySearchTree.swift in Sources */,
+				65CDC47A297509E300923CF8 /* List.swift in Sources */,
+				65CDC478297509D600923CF8 /* DFS.swift in Sources */,
+				65CDC47C297509EC00923CF8 /* Stack.swift in Sources */,
 				65DC79C5296B09D3005DD275 /* main.swift in Sources */,
 				65DE07C9296C15D000B88B95 /* TreeNode.swift in Sources */,
 				65DE07CD296D954D00B88B95 /* TreeTraversal.swift in Sources */,
