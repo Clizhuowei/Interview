@@ -27,6 +27,8 @@ func fib(_ n: Int) -> Int {
     var dp: [Int] = []
     dp.append(0)
     dp.append(1)
+    
+    
     for i in 2...n {
         dp.append(dp[i - 1] + dp[i - 2])
     }
@@ -59,4 +61,24 @@ func minCostClimbingStairs(_ cost: [Int]) -> Int {
     }
 
     return dp[cost.count]
+}
+
+// 剑指 Offer 14- I. 剪绳子
+func cuttingRope(_ n: Int) -> Int {
+    if n == 2 {
+        return 1
+    }
+    var dp: [Int] = []
+    for _ in 0...n {
+        dp.append(0)
+    }
+    dp[2] = 1
+    
+    for index in 3...n {
+        for i in (1..<index).reversed() {
+            dp[index] = max(dp[index], max(i * dp[index-i], i * (index-i)))
+        }
+    }
+
+    return dp[n]
 }

@@ -171,8 +171,9 @@ func levelOrderTraversal(_ root: TreeNode?) -> [[Int]] {
     while !rootQueue.isEmpty {
         var rootLevel: [Int] = []
         
+        // 根据当前树的结点数目循环，因为 Queue 是往后面添加，而且 PopFirst，所以不会影响Queue的结构
         for _ in 0..<rootQueue.count {
-            var node = rootQueue.removeFirst()
+            let node = rootQueue.removeFirst()
             rootLevel.append(node.val)
             if let left = node.left {
                 rootQueue.append(left)
