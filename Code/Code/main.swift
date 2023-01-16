@@ -16,4 +16,3 @@ let root = helper.treeInit([4,2,7,1,3,6,9])
 
 var dp: [Int] = [1,2,5,10,6,9,4,3]
 
-print(recur(dp, 0, 3))
