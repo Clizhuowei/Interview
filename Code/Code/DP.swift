@@ -82,3 +82,47 @@ func cuttingRope(_ n: Int) -> Int {
 
     return dp[n]
 }
+
+// MARK: - 最长回文子串，核心 dp[i][j] 表示从 i - j 的字符串是否是回文的
+func longestPalindrome(_ s: String) -> String {
+    if s.count <= 1 {
+        return s
+    }
+    
+    var sArray: [Character] = []
+    for c in s {
+        sArray.append(c)
+    }
+    
+    var dp: [[Bool]] = Array.init(repeating:Array.init(repeating:false, count:s.count), count:s.count)
+    var maxLength = 0
+    var maxBegin = 0
+
+    for i in 0..<s.count {
+        dp[i][i] = true
+    }
+
+    for i in stride(from:s.count-1, through:0, by:-1) {
+        for j in i..<s.count {
+            if sArray[i] == sArray[j] {
+                if j - i <= 1 {
+                    dp[i][j] = true
+                } else {
+                    dp[i][j] = dp[i+1][j-1]
+                }
+            } else {
+                dp[i][j] = false
+            }
+
+            if j - i > maxLength, dp[i][j] == true {
+                maxBegin = i
+                maxLength = j - i
+            }
+        }
+    }
+    
+    let beginIndex = s.index(s.startIndex, offsetBy:maxBegin)
+    let finalIndex = s.index(s.startIndex, offsetBy:maxBegin+maxLength)
+    return String(s[beginIndex...finalIndex])
+}
+

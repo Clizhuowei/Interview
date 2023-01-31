@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6533D3862987FAD90044CD80 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533D3852987FAD90044CD80 /* String.swift */; };
 		65CDC476297509CF00923CF8 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC475297509CF00923CF8 /* Array.swift */; };
 		65CDC478297509D600923CF8 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC477297509D600923CF8 /* DFS.swift */; };
 		65CDC47A297509E300923CF8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CDC479297509E300923CF8 /* List.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6533D3852987FAD90044CD80 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		65CDC475297509CF00923CF8 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		65CDC477297509D600923CF8 /* DFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
 		65CDC479297509E300923CF8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				65CDC47D297509FE00923CF8 /* List */,
 				65CDC47E29750A3C00923CF8 /* Tree */,
 				65DE07D2296FE0D200B88B95 /* DP.swift */,
+				6533D3852987FAD90044CD80 /* String.swift */,
 				65CDC475297509CF00923CF8 /* Array.swift */,
 				65CDC477297509D600923CF8 /* DFS.swift */,
 				65CDC47B297509EC00923CF8 /* Stack.swift */,
@@ -172,6 +175,7 @@
 				65CDC47A297509E300923CF8 /* List.swift in Sources */,
 				65CDC478297509D600923CF8 /* DFS.swift in Sources */,
 				65CDC47C297509EC00923CF8 /* Stack.swift in Sources */,
+				6533D3862987FAD90044CD80 /* String.swift in Sources */,
 				65DC79C5296B09D3005DD275 /* main.swift in Sources */,
 				65DE07C9296C15D000B88B95 /* TreeNode.swift in Sources */,
 				65DE07CD296D954D00B88B95 /* TreeTraversal.swift in Sources */,
@@ -300,7 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UB955PQL8J;
+				DEVELOPMENT_TEAM = 6J762VLC7C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -311,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UB955PQL8J;
+				DEVELOPMENT_TEAM = 6J762VLC7C;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
