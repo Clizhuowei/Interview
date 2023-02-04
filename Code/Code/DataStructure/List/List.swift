@@ -74,10 +74,6 @@ func getKthFromEnd(_ head: ListNode?, _ k: Int) -> ListNode? {
 
 // MARK: - 剑指 Offer 24. 反转链表
 func reverseList(_ head: ListNode?) -> ListNode? {
-    guard head != nil else {
-        return nil
-    }
-    
     var prev: ListNode? = nil
     var cur = head
     
@@ -88,9 +84,7 @@ func reverseList(_ head: ListNode?) -> ListNode? {
         cur = temp
     }
     
-    
     return prev
-    
 }
 
 // MARK: - 剑指 Offer 25. 合并两个排序的链表
@@ -98,12 +92,12 @@ func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     if l1 == nil || l2 == nil{
         return l1 ?? l2
     }
-
+    
     let head: ListNode? = ListNode(0)
     var temp = head
     var tempL1 = l1
     var tempL2 = l2
-
+    
     while tempL1 != nil, tempL2 != nil {
         if tempL1!.val < tempL2!.val {
             temp?.next = tempL1
@@ -114,8 +108,44 @@ func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         }
         temp = temp?.next
     }
-
+    
     temp?.next = tempL1 ?? tempL2
     
     return head?.next
+}
+
+// MARK: 25. K 个一组翻转链表
+func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
+    let dummy: ListNode? = ListNode(0)
+    dummy?.next = head
+    
+    var prev = dummy
+    var end = dummy
+    
+    while end?.next != nil {
+        for _ in 0..<k {
+            end = end?.next
+        }
+        if end == nil {
+            break
+        }
+        
+        let start = prev?.next
+        let next = end?.next
+        
+        // 断开后续, 开始进行翻转
+        end?.next = nil
+        
+        // 使用到上面的反转链表
+        prev?.next = reverseList(start!)
+        
+        //
+        start?.next = next
+        
+        // 重新置
+        prev = start
+        end = start
+    }
+    
+    return dummy?.next
 }

@@ -40,7 +40,7 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
     if matrix.count == 0 {
         return []
     }
-
+    
     if matrix[0].count == 0 {
         return []
     }
@@ -58,7 +58,7 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         if top > bottom {
             break
         }
-
+        
         for index in top...bottom {
             result.append(matrix[index][right])
         }
@@ -66,7 +66,7 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         if right < left {
             break
         }
-
+        
         for index in stride(from:right ,to:left-1, by:-1) {
             result.append(matrix[bottom][index])
         }
@@ -74,7 +74,7 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         if bottom < top {
             break
         }
-
+        
         for index in stride(from:bottom ,to:top-1, by:-1) {
             result.append(matrix[index][left])
         }
@@ -83,7 +83,69 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
             break
         }
     }
-
+    
     return result
 }
 
+// MARK: - 盛水最多的容器
+func maxArea(_ height: [Int]) -> Int {
+    var left = 0
+    var right = height.count - 1
+    var result = 0
+    
+    while left < right {
+        let currentArea = (right - left) * min(height[left], height[right])
+        result = max(currentArea, result)
+        
+        if height[left] < height[right] {
+            left += 1
+        } else {
+            right -= 1
+        }
+    }
+    
+    return result
+}
+
+// MARK: - 三数之和
+func threeSum(_ nums: [Int]) -> [[Int]] {
+    if nums.count < 3 {
+        return []
+    }
+    
+    let temp = nums.sorted()
+    var result: [[Int]] = []
+    
+    for i in 0..<temp.count {
+        if temp[i] > 0 {
+            return result
+        }
+        if i > 0, temp[i] == temp[i-1] {
+            continue
+        }
+        
+        var j = i + 1
+        var k = temp.count - 1
+        
+        while j < k {
+            let sum = temp[i] + temp[j] + temp[k]
+            if sum == 0 {
+                result.append([temp[i], temp[j], temp[k]])
+                while j < k, temp[j] == temp[j+1] {
+                    j += 1
+                }
+                while j < k, temp[k] == temp[k-1] {
+                    k -= 1
+                }
+                j += 1
+                k -= 1
+            } else if sum > 0 {
+                k -= 1
+            } else {
+                j += 1
+            }
+        }
+    }
+    
+    return result
+}
